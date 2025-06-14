@@ -1,0 +1,44 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: #24353f;
+}
+
+.register-card {
+  width: 65%;
+  box-shadow: 0 0px 40px rgba(0, 0, 0, 0.7);
+}
+
+.register-header {
+  color: #14a2b8;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.form-control::placeholder {
+  color: white;
+}
+
+.custom-btn {
+  color: #14a2b8;
+  border-color: #14a2b8;
+}
+
+.custom-btn:hover {
+  background-color: #14a2b8;
+  color: white;
+}
+
+a.login-page {
+  padding-bottom: 3px;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+a.login-page:hover {
+  border-bottom: 2px solid white;
+}

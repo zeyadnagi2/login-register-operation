@@ -8,12 +8,49 @@
     <!-- Google Fonts -->
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/Register.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/register.css" />
   </head>
 
   <body>
+
+    <!-- content of the login page -->
+
+    <div class="container register-card m-auto my-5 p-5">
+      <h1 class="register-header text-center fw-normal mb-4">
+        Smart Login System
+      </h1>
+
+      <input
+        class="form-control my-3 bg-transparent"
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Enter Your Name"
+      />
+
+      <input
+        class="form-control my-3 bg-transparent"
+        type="text"
+        name="email"
+        id="email"
+        placeholder="Enter Your Email"
+      />
+      <input
+        class="form-control my-3 bg-transparent"
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Enter Your password"
+      />
+
+      <button type="submit" class="btn form-control custom-btn mt-3">Register</button>
+
+      <p class="login-btn text-center mt-3 text-white fs-6">You have an account : <a class="login-page" href="../index.html">Sign In</a></p>
+    </div>
+
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
   </body>
