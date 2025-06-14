@@ -6,6 +6,12 @@
     <title>Login</title>
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/all.min.css" />
@@ -14,6 +20,33 @@
   </head>
 
   <body>
+    <!-- content of the login page -->
+
+    <div class="container login-card m-auto my-5 p-5">
+      <h1 class="login-header text-center fw-normal mb-4">
+        Smart Login System
+      </h1>
+
+      <input
+        class="form-control my-3 bg-transparent"
+        type="text"
+        name="email"
+        id="email"
+        placeholder="Enter Your Email"
+      />
+      <input
+        class="form-control my-3 bg-transparent"
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Enter Your password"
+      />
+
+      <button type="submit" class="btn form-control custom-btn mt-3">Login</button>
+
+      <p class="register-btn text-center mt-3 text-white fs-6">Don’t have an account? <a class="register-page" href="./pages/register.html">Sign Up</a></p>
+    </div>
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
   </body>
