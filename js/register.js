@@ -19,10 +19,15 @@ function addUserRegister() {
       rPassword: registerPassword.value,
     };
 
+    var users = JSON.parse(localStorage.getItem("users")) || [];
+
     users.push(user);
+
+    localStorage.setItem("users", JSON.stringify(users));
+
     clearRegisterInputs();
 
-    window.location.href = "../index.html"; // make sure the path is correct!
+    window.location.href = "../index.html"; // redirect to login
   }
 }
 
