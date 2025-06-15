@@ -28,29 +28,49 @@
       </h1>
 
       <input
-        class="form-control my-3 bg-transparent"
+        oninput="registerValidation(this)"
+        class="form-control my-3 bg-transparent text-white"
         type="text"
-        name="register-name"
-        id="register-name"
+        name="registerName"
+        id="registerName"
         placeholder="Enter Your Name"
       />
 
+      <div class="alert alert-danger w-100 my-2 text-secondary">
+        <p>choose unique user name</p>
+      </div>
+
       <input
-        class="form-control my-3 bg-transparent"
+        oninput="registerValidation(this)"
+        class="form-control my-3 bg-transparent text-white"
         type="text"
-        name="register-email"
-        id="register-email"
+        name="registerEmail"
+        id="registerEmail"
         placeholder="Enter Your Email"
       />
+
+      <div class="alert alert-danger w-100 my-2 text-secondary">
+        <p>write email in the correct format</p>
+      </div>
+
       <input
-        class="form-control my-3 bg-transparent"
+        oninput="registerValidation(this)"
+        class="form-control my-3 bg-transparent text-white"
         type="password"
-        name="register-password"
-        id="register-password"
+        name="registerPassword"
+        id="registerPassword"
         placeholder="Enter Your password"
       />
 
-      <button type="submit" class="btn form-control custom-btn mt-3">
+      <div class="alert alert-danger w-100 my-2 text-secondary">
+        <p>write your own password strong</p>
+      </div>
+
+      <button
+        onclick="addUserRegister()"
+        type="submit"
+        class="btn form-control custom-btn mt-3"
+      >
         Register
       </button>
 
@@ -60,7 +80,7 @@
       </p>
     </div>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/register.js"></script>
   </body>
 </html>
