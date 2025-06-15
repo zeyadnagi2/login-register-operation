@@ -24,7 +24,6 @@ function addUserRegister() {
     users.push(user);
 
     localStorage.setItem("users", JSON.stringify(users));
-
     clearRegisterInputs();
 
     window.location.href = "../index.html"; // redirect to login

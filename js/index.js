@@ -2,7 +2,6 @@ var loginEmail = document.getElementById("loginEmail");
 var loginPassword = document.getElementById("loginPassword");
 var alertBox = document.getElementById("alert");
 
-// Login function
 function loginUser() {
   const isEmailValid = loginValidation(loginEmail);
   const isPasswordValid = loginValidation(loginPassword);
@@ -12,24 +11,21 @@ function loginUser() {
 
     const foundUser = users.find(
       (user) =>
-        user.rEmail.toLowerCase() === loginEmail.value.trim().toLowerCase() &&
-        user.rPassword === loginPassword.value.trim()
+        user?.rEmail?.toLowerCase() === loginEmail.value.trim().toLowerCase() &&
+        user?.rPassword === loginPassword.value.trim()
     );
 
     if (foundUser) {
-      console.log("✅ User found:", foundUser);
-
       alertBox.classList.add("d-none");
       loginEmail.classList.remove("is-invalid");
       loginPassword.classList.remove("is-invalid");
 
-      localStorage.setItem("loggedInUser", foundUser.rName);
+      // Save logged in user
+      localStorage.setItem("loggedInUser", JSON.stringify(foundUser));
 
-      // Redirect to home
-      window.location.href = "../pages/home.html";
+      // Redirect to home page
+      window.location.href = "./pages/home.html";
     } else {
-      window.alert("❌ No matching user found");
-
       loginEmail.classList.remove("is-valid");
       loginPassword.classList.remove("is-valid");
 
@@ -39,12 +35,10 @@ function loginUser() {
       alertBox.classList.remove("d-none");
     }
   } else {
-    // Format error (email/password doesn't match regex)
     alertBox.classList.add("d-none");
   }
 }
 
-// Validation function
 function loginValidation(element) {
   const loginRegx = {
     loginEmail: /^[a-zA-Z0-9_]+@(gmail|hotmail|yahoo)\.(com|org)$/,
@@ -56,12 +50,11 @@ function loginValidation(element) {
   if (isValid) {
     element.classList.add("is-valid");
     element.classList.remove("is-invalid");
-    element.nextElementSibling.classList.add("d-none");
+    return ture;
   } else {
     element.classList.remove("is-valid");
     element.classList.add("is-invalid");
-    element.nextElementSibling.classList.remove("d-none");
+    return false;
   }
 
-  return isValid;
 }
