@@ -28,7 +28,6 @@
       </h1>
 
       <input
-        oninput="registerValidation(this)"
         class="form-control my-3 bg-transparent text-white"
         type="text"
         name="registerName"
@@ -36,12 +35,7 @@
         placeholder="Enter Your Name"
       />
 
-      <div class="alert alert-danger w-100 my-2 text-secondary d-none">
-        <p>choose unique user name</p>
-      </div>
-
       <input
-        oninput="registerValidation(this)"
         class="form-control my-3 bg-transparent text-white"
         type="text"
         name="registerEmail"
@@ -49,12 +43,7 @@
         placeholder="Enter Your Email"
       />
 
-      <div class="alert alert-danger w-100 my-2 text-secondary d-none">
-        <p>write email in the correct format</p>
-      </div>
-
       <input
-        oninput="registerValidation(this)"
         class="form-control my-3 bg-transparent text-white"
         type="password"
         name="registerPassword"
@@ -62,15 +51,7 @@
         placeholder="Enter Your password"
       />
 
-      <div class="alert alert-danger w-100 my-2 text-secondary d-none">
-        <p>write your own password strong</p>
-      </div>
-
-      <button
-        onclick="addUserRegister()"
-        type="submit"
-        class="btn form-control custom-btn mt-3"
-      >
+      <button type="submit" class="btn form-control custom-btn mt-3">
         Register
       </button>
 

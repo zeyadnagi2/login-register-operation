@@ -26,7 +26,6 @@
       </h1>
 
       <input
-        oninput="loginValidation(this)"
         class="form-control my-3 bg-transparent text-white"
         type="text"
         name="loginEmail"
@@ -35,7 +34,6 @@
       />
 
       <input
-        oninput="loginValidation(this)"
         class="form-control my-3 bg-transparent text-white"
         type="password"
         name="loginPassword"
@@ -43,12 +41,7 @@
         placeholder="Enter Your Password"
       />
 
-      <div id="alert" class="alert alert-danger text-center d-none">
-        Invalid email or password!
-      </div>
-
       <button
-        onclick="loginUser()"
         type="submit"
         class="btn form-control custom-btn mt-3"
       >
