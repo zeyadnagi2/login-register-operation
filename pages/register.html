@@ -1,67 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&family=Pacifico&family=Righteous&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../css/all.min.css" />
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/register.css" />
-  </head>
+  <link rel="stylesheet" href="../css/all.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/register.css" />
+</head>
+<body>
+  <div class="container register-card m-auto my-5 p-5">
+    <h1 class="register-header text-center fw-normal mb-4">Smart Login System</h1>
 
-  <body>
-    <!-- content of the login page -->
+    <!-- Name -->
+    <input class="form-control my-3 bg-transparent text-white" type="text" id="registerName" placeholder="Enter Your Name" />
+    <div id="nameError" class="text-danger small mb-2 ps-1"></div>
 
-    <div class="container register-card m-auto my-5 p-5">
-      <h1 class="register-header text-center fw-normal mb-4">
-        Smart Login System
-      </h1>
+    <!-- Email -->
+    <input class="form-control my-3 bg-transparent text-white" type="text" id="registerEmail" placeholder="Enter Your Email" />
+    <div id="emailError" class="text-danger small mb-2 ps-1"></div>
 
-      <input
-        class="form-control my-3 bg-transparent text-white"
-        type="text"
-        name="registerName"
-        id="registerName"
-        placeholder="Enter Your Name"
-      />
+    <!-- Password -->
+    <input class="form-control my-3 bg-transparent text-white" type="password" id="registerPassword" placeholder="Enter Your Password" />
+    <div id="passwordError" class="text-danger small mb-2 ps-1"></div>
 
-      <input
-        class="form-control my-3 bg-transparent text-white"
-        type="text"
-        name="registerEmail"
-        id="registerEmail"
-        placeholder="Enter Your Email"
-      />
+    <button id="registerBtn" class="btn form-control custom-btn mt-3">Register</button>
 
-      <input
-        class="form-control my-3 bg-transparent text-white"
-        type="password"
-        name="registerPassword"
-        id="registerPassword"
-        placeholder="Enter Your password"
-      />
+    <p class="login-btn text-center mt-3 text-white fs-6">
+      You have an account? <a href="../index.html">Sign In</a>
+    </p>
+  </div>
 
-      <button type="submit" class="btn form-control custom-btn mt-3">
-        Register
-      </button>
-
-      <p class="login-btn text-center mt-3 text-white fs-6">
-        You have an account :
-        <a class="login-page" href="../index.html">Sign In</a>
-      </p>
-    </div>
-
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/index.js"></script>
-  </body>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/index.js"></script>
+</body>
 </html>
